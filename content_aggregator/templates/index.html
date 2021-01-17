@@ -1,9 +1,15 @@
 {% extends 'index_base.html' %}
 
 {% block content %}
+{% if error_message %}
+<div class="alert alert-danger" role="alert">
+  {{ error_message }}
+</div>
+{% endif %}
+
 <div class="jumbotron" style="padding: 1rem 2rem;">
     <center><h1>News Aggregator</h1>
-        <a href="/" class="btn-sm btn-danger">Refresh News</a>
+        <a href="{% url 'index'%}" class="btn-sm btn-danger">Refresh News</a>
         <a href='{% url "web_scrap:list" %}' class="btn-sm btn-danger">View All News</a>
 </center>
 </div>
