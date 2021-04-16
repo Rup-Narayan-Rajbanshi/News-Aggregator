@@ -91,8 +91,12 @@ WSGI_APPLICATION = 'content_aggregator.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'web_scrap',
+        'USER': 'web_scrap',
+        'PASSWORD': 'web_scrap',
+        'HOST': 'db',
+        'PORT': 5432
     }
 }
 

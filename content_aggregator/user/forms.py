@@ -69,7 +69,7 @@ class UserLoginForm(forms.Form):
 
 
 class EditUserForm(forms.ModelForm):
-	choices = [(group, group) for group in Group.objects.all()]
+	# choices = [(group, group) for group in Group.objects.all()]
 	# user_group=forms.ChoiceField(
     #     choices = choices,
     #     required = False,
